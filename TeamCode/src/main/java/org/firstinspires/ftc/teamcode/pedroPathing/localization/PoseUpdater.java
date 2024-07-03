@@ -55,11 +55,7 @@ public class PoseUpdater {
      */
     public PoseUpdater(HardwareMap hardwareMap) {
         this.hardwareMap = hardwareMap;
-        if (useRRLocalizer) {
-            localizer = new ThreeDeadWheelLocalizer(hardwareMap);
-        } else {
-            localizer = new ThreeWheelLocalizer(hardwareMap);
-        }
+        localizer = new TwoWheelLocalizer(hardwareMap);
     }
 
     /**
